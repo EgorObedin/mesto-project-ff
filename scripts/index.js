@@ -5,12 +5,12 @@ const placesList = document.querySelector(".places__list");
 // @todo: Функция создания карточки
 function createCardElm(cardData, deleteCallBack) {
   const cardElm = cardTemplate.querySelector(".card").cloneNode(true);
-  const ImageElm = cardElm.querySelector(".card__image");
-  const TitleElm = cardElm.querySelector(".card__title");
+  const imageElm = cardElm.querySelector(".card__image");
+  const titleElm = cardElm.querySelector(".card__title");
 
-  ImageElm.src = cardData.link;
-  ImageElm.alt = cardData.name;
-  TitleElm.textContent = cardData.name;
+  imageElm.src = cardData.link;
+  imageElm.alt = cardData.name;
+  titleElm.textContent = cardData.name;
 
   const deleteButton = cardElm.querySelector(".card__delete-button");
   deleteButton.addEventListener("click", () => {
